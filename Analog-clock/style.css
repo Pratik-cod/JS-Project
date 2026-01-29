@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clock{
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    background-color: rgb(32, 39, 35);
+    border-radius: 50%;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.num{
+    position: absolute;
+    color: wheat;
+    inset: 20px;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--v)));
+}
+.num b{
+    display: inline-block;
+  transform: rotate(calc(-30deg * var(--v)));
+  font-size: 18px;
+}
+.dot{
+    position: absolute;
+    height: 8%;
+    width: 8%;
+    background-color:rgb(32, 39, 35); 
+    border-radius: 50%;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.8),
+    -1px -2px 10px rgba(0,0,0,0.8) ;
+    z-index: 2;
+
+}
+.digi-clock{
+    position: absolute;
+     width: 30%;
+    height: 10%;
+    background-color: black;
+    bottom: 27%;
+    background: transparent;
+     box-shadow: inset 1px 2px 10px rgba(0,0,0,0.8),
+    -1px -2px 10px rgba(0,0,0,0.8) ;
+ display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+    font-size: 22px;
+    
+}
+.dh{
+      color:rgb(54, 188, 188) ;
+}
+.dm{
+      color: rgb(97, 60, 119);
+}
+.ds{
+      color: rgb(13, 13, 60);
+}
+
+.hour-hand,.min-hand,.sec-hand{
+position: absolute;
+background-color: black;
+border-radius: 20px;
+transform-origin: bottom;
+
+
+}
+.hour-hand{
+    width: 1%;
+    height: 30%;
+    top: 20.5%;
+    background-color:rgb(54, 188, 188);
+}
+.min-hand{
+    width: 1%;
+    height: 35%;
+    top: 15.5%;
+    background-color: rgb(97, 60, 119);
+}
+.sec-hand{
+    width: 1%;
+    height: 40%;
+    top: 10.5%;
+    background-color: rgb(13, 13, 60);
+}
+@media(max-width:760px){
+    .clock{
+        height: 80vw;
+        width: 80vw;
+    }
+}
