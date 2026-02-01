@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+.flex.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* spacing between input and card */
+}
+
+.input-btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    width: 220px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    background-color: #222;
+    color: #fff;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-btn::placeholder {
+    color: #aaa;
+}
+
+.input-btn:focus {
+    background-color: #333;
+    box-shadow: 0 0 0 2px #555;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.bg-mg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.bluered-layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-position: bottom;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: 1;
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 2;
+}
+
+.content h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.4;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
